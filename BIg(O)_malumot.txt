@@ -1,0 +1,64 @@
+Big O notatsiyasini tushunish
+Big O belgisida “O” funksiyaning tartibini, “f(n)” esa algoritmning vaqt murakkabligini “n” kiritish hajmi bo‘yicha tavsiflovchi funksiyani ifodalaydi. 
+"O(f(n))" yozuvi algoritmning vaqt murakkabligi "n" ning o'ziga xos funktsiyasidan tez o'smasligini bildiradi. Bu erda "f(n)" matematik funktsiya bo'lib, 
+kirish hajmi o'sishi bilan algoritmning ishlash vaqti qanday oshishini tavsiflaydi.
+
+Masalan:
+O(1): Doimiy vaqt murakkabligi, bunda algoritmning ishlash vaqti kirish hajmidan qatʼiy nazar doimiy boʻlib qoladi.
+O(log n): Logarifmik vaqt murakkabligi, bu erda algoritmning ishlash vaqti kirish hajmi bilan logarifmik ravishda o'sadi.
+O(n): Chiziqli vaqt murakkabligi, bu erda algoritmning ishlash vaqti kirish hajmi bilan chiziqli ravishda o'sib boradi.
+O(n log n): Linearitmik vaqt murakkabligi, odatda mergesort va heapsort kabi samarali saralash algoritmlarida kuzatiladi .
+O(n^2): Kvadrat vaqt murakkabligi, bunda algoritmning ishlash vaqti kirish hajmiga qarab kvadratik ravishda oshadi.
+
+
+     Oddiy Big Os o'rtasidagi murakkablikni taqqoslash
+O(1) - doimiy vaqt murakkabligi
+Tavsif: Doimiy vaqt murakkabligi bo'lgan algoritmlar kirish hajmidan qat'i nazar, doimiy vaqt miqdorida bajariladi.
+Misol: Massivdagi elementga indeks bo'yicha kirish.
+Taqqoslash: Kirish hajmidan qat'i nazar, vaqt bir xil.
+     O(log n) - Logarifmik vaqt murakkabligi
+Tavsif: Logarifmik vaqt murakkabligi bo'lgan algoritmlarning ishlash vaqti kirish hajmiga qarab logarifmik ravishda o'sadi.
+Misol: tartiblangan massivda ikkilik qidiruv.
+Taqqoslash: Kirish hajmi oshgani sayin, ish vaqti asta-sekin o'sib boradi, bu uni chiziqli vaqt murakkabligiga qaraganda samaraliroq qiladi.
+     O(n) - chiziqli vaqt murakkabligi
+Tavsif: Chiziqli vaqt murakkabligi bo'lgan algoritmlarning ishlash vaqti kirish hajmiga qarab chiziqli ravishda o'sadi.
+Misol: Saralanmagan massiv orqali chiziqli qidiruv.
+Taqqoslash: Ish vaqti kirish hajmiga mutanosib ravishda ortadi.
+     O(n log n) - Linearithmik vaqt murakkabligi
+Tavsif: Chiziqli vaqt murakkabligi bo'lgan algoritmlarning ishlash vaqti kirish o'lchamining logarifmiga ko'paytirilgan kirish hajmiga mutanosib ravishda o'sadi.
+Misol: Mergesort va heapsort kabi samarali tartiblash algoritmlari .
+Taqqoslash: Kvadrat vaqt murakkabliklariga qaraganda samaraliroq, lekin chiziqli yoki logarifmiklarga qaraganda unchalik samarali emas.
+     O(n^2) - Kvadrat vaqt murakkabligi
+Tavsif: Kvadrat vaqt murakkabligi bo'lgan algoritmlarning ishlash vaqti kirish hajmiga qarab kvadratik ravishda o'sadi.
+Misol: Kirish bo'yicha takrorlanadigan ichki tsikllar.
+Taqqoslash: Kirish hajmi oshgani sayin, ish vaqti kvadratik ravishda o'sib boradi va bu katta kirishlar uchun unchalik samarali bo'lmaydi.
+     O(2^n) - Eksponensial vaqt murakkabligi
+Tavsif: Eksponensial vaqt murakkabligi bo'lgan algoritmlarning ishlash vaqti kirish hajmiga qarab eksponent ravishda o'sadi.
+Misol: barcha mumkin bo'lgan kombinatsiyalarni sinab ko'radigan qo'pol kuch algoritmlari.
+Taqqoslash: Katta kirishlar uchun juda samarasiz, chunki kirish hajmining kichik o'sishi bilan ishlash vaqti tez oshadi.
+     O(n!) - Faktoriy vaqtning murakkabligi
+Tavsif: Faktorial vaqt murakkabligi algoritmlari kirish hajmiga qarab ishlash vaqti omili sifatida oshadi.
+Misol: To'plamning barcha almashtirishlarini yaratuvchi algoritmlar.
+Taqqoslash: Juda samarasiz, ish vaqti kirish hajmi bilan juda tez o'sib boradi.
+
+
+LINEAR SEARCH
+
+Element tasodifiy tartibda massivda va biz elementni topishimiz kerak deb faraz qilaylik. 
+Keyin maqsadli elementni qidirishning yagona yo'li - birinchi pozitsiyadan boshlash va uni maqsad bilan solishtirish. Agar element bir xil bo'lsa, biz joriy elementning o'rnini qaytaramiz. Aks holda, biz keyingi pozitsiyaga o'tamiz. 
+Agar biz massivning oxirgi pozitsiyasiga etib kelsak va hali ham maqsadni topa olmasak, biz -1 ni qaytaramiz. Bu chiziqli qidiruv yoki ketma-ket qidiruv deb ataladi.
+
+
+BINARY SEARCH
+
+Ikkilik qidiruvda, saralangan ro'yxatning o'rtasini topganingizdan so'ng qidiruvingizni yarmiga qisqartiring. O'rta element qidirilayotgan qiymatdan katta yoki kichik ekanligini tekshirish uchun ko'rib chiqiladi. 
+Shunga ko'ra, qidiruv berilgan ro'yxatning yarmida amalga oshiriladi
+
+
+ARRAY
+
+Massiv - qo'shni xotira joylarida saqlanadigan, indeks yoki kalit orqali kirish mumkin bo'lgan elementlar to'plami. Ko'pgina dasturlash tillarida massivlar qat'iy belgilangan o'lchamlarga ega.
+
+LINKED LIST
+
+Bog'langan ro'yxat - bu elementlar tugunlarda saqlanadigan chiziqli ma'lumotlar tuzilmasi. Har bir tugun ma'lumotlarni va keyingi tugunga havolani (yoki havolani) o'z ichiga oladi. Bog'langan ro'yxatlar dinamik ravishda o'sishi yoki qisqarishi mumkin.
